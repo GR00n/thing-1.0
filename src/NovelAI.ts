@@ -153,9 +153,9 @@ export async function messageContructor(messages:any) {
   for (let message of messages) {
       if (message.role === "system") {
         if (message.name == 'example_assistant') {
-          example_chat += `${names.chractername}: ${message.content}\n'### New Roleplay:\n`;
+          example_chat += `${names.chractername}: ${message.content}\n### New Roleplay:\n`;
         }else if (message.name == 'example_user') {
-          example_chat += `${names.username}: ${message.content}\n'### New Roleplay:\n`;
+          example_chat += `${names.username}: ${message.content}\n### New Roleplay:\n`;
         }else if (message.name == null){
           info_messages += `${message.content}\n`.replace('[Start a new Chat]','');
         }
