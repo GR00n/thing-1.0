@@ -62,7 +62,6 @@ app.get("/v2/driver/models", async function (req, res) {
   });
 
 });
-
 // Start server
 app.listen(SERVER_PORT, () => {
   UpdateConsole(`Waiting for Request...`).info()
@@ -99,6 +98,9 @@ app.post("/v2/driver/chat/completions", async function Completion(req, res) {
 });
 
 
+
+
+
 export function UpdateConsole(message: string) {
   // console.clear()
 
@@ -122,3 +124,6 @@ export function UpdateConsole(message: string) {
     warning: warning,
   }
 }
+
+
+

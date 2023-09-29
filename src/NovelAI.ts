@@ -56,8 +56,8 @@ export async function getResponse(req: string) {
         model: 'kayra-v1',
         parameters: {
           use_string: true,
-          temperature: 1.35,
-          max_length: 150,
+          temperature: settings.temperature,
+          max_length: settings.max_tokens,
           min_length: 1,
           tail_free_sampling: 0.915,
           repetition_penalty: 2.8,
@@ -147,7 +147,7 @@ export async function messageContructor(messages:any) {
   let info_messages:string = ''; // System Messages, They get inserted before the chat
   let chat:string = ''; // Chat Messages, This is just a Chat History
   let example_chat:string = ''; // These are Example Messages
-
+  
   getNames(messages)
   
   for (let message of messages) {
